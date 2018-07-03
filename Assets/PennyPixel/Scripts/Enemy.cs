@@ -62,7 +62,7 @@ public class Enemy : EnemyMaster<ENEMY_STATE> {
 		//유저 검색...
 		//if(Physics2D.Raycast(transHead.position, )){
 		//}
-		Debug.Log(Physics2D.gravity);
+		//Debug.Log(Physics2D.gravity);
 
 		//이동...
 		trans.Translate (moveDir * moveSpeed * Time.deltaTime);
