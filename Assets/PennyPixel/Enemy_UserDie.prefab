@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1329411014297172}
+  m_IsPrefabParent: 1
+--- !u!1 &1329411014297172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4148759714034378}
+  - component: {fileID: 212820795258918578}
+  - component: {fileID: 58049104024326282}
+  - component: {fileID: 114270726419610462}
+  - component: {fileID: 114511117862834976}
+  m_Layer: 10
+  m_Name: Enemy_UserDie
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4148759714034378
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329411014297172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.13, y: 1.29, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58049104024326282
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329411014297172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  serializedVersion: 2
+  m_Radius: 0.33
+--- !u!114 &114270726419610462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329411014297172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b9f9a224a91544b96c41632630ee21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trans: {fileID: 0}
+  go: {fileID: 0}
+  hitPoint: {x: 0, y: 0, z: 0}
+  hitDir: {x: 0, y: 0, z: 0}
+  STARTING_HEALTH: 20
+  mask:
+    serializedVersion: 2
+    m_Bits: 256
+  viewDistance: 4
+  moveSpeed: 1
+  moveDir: {x: 0, y: 0, z: 0}
+  damage: 1
+  health: 0
+  bDead: 0
+  stateCurrent: {fileID: 11400000, guid: e17cc97ad2392d145b05e6f943ee3569, type: 2}
+  stateRemain: {fileID: 11400000, guid: c07519fb68a6a5a49857b7b5e4a0be97, type: 2}
+  wayLocal:
+  - {x: -4.1570425, y: 0.28649163, z: 0}
+  - {x: 2.6975098, y: 0.31932712, z: 0}
+  wayWorld: []
+  wayIndex: 0
+  target: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  attackDistance: 3
+  attackRate: 1
+  chaseDistance: 1
+  speedChase: 1.5
+  seeDistance: 6
+  chaseLockOnTime: 2
+  viewDir: {x: 0, y: 0}
+--- !u!114 &114511117862834976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329411014297172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35435163fe602a647b1de7dea40465b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &212820795258918578
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1329411014297172}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1907945055
+  m_SortingLayer: -3
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300028, guid: 0540eeb6c369e1e499fc90e6880e6bce, type: 3}
+  m_Color: {r: 0.022157282, g: 0.021193791, b: 0.029411793, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2526b16b2117446957c2f872483039, type: 3}
+  m_Name: P2StatePatrol
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: 58dd2b5d101b84840a396befe7884da0, type: 2}
+  transitions:
+  - decide: {fileID: 11400000, guid: d39ad6f4fe724e84f9fb381100ca7b16, type: 2}
+    stateTrue: {fileID: 11400000, guid: 7509f09b010295f44bbeeb2f5ef58732, type: 2}
+    stateFalse: {fileID: 11400000, guid: c07519fb68a6a5a49857b7b5e4a0be97, type: 2}
+  gizmosColor: {r: 0.20000005, g: 1, b: 0, a: 1}

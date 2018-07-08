@@ -51,7 +51,8 @@ public class PlayerPlatformerController : PhysicsObject {
 
 	//-----------------------------------
     protected override void ComputeVelocity()
-    {
+	{
+		//Debug.Log (spriteRenderer.flipX);
 		//--------------------------
 		// Left - Right move > get
 		//--------------------------
@@ -79,6 +80,7 @@ public class PlayerPlatformerController : PhysicsObject {
 		//Attack, Attack, Skill1,2
 		//spawnDir [L 0] [R 1]
 		//-------------------------------------------
+		spawnDir = spriteRenderer.flipX ? 0 : 1;
 		if ((uiBtnRight.GetAttackDown () || Input.GetKeyDown(KeyCode.P)) && Time.time > waitAttackTime ) {
 			waitAttackTime = Time.time + WAIT_ATTACK_TIME;
 			PlayerBullet2 _scp = PoolManager.ins.Instantiate ("PlayerBullet2", spawnPoint[spawnDir].position, spawnPoint[spawnDir].rotation).GetComponent<PlayerBullet2>();
@@ -100,20 +102,20 @@ public class PlayerPlatformerController : PhysicsObject {
 		//-------------------------------------------
         if(move.x > 0.01f)
         {
-			spawnDir = 1;
+			//spawnDir = 1;
             if(spriteRenderer.flipX == true)
             {
                 spriteRenderer.flipX = false;
-				spawnDir = 1; 
+				//spawnDir = 1; 
             }
         } 
         else if (move.x < -0.01f)
 		{
-			spawnDir = 0;
+			//spawnDir = 0;
             if(spriteRenderer.flipX == false)
             {
 				spriteRenderer.flipX = true;
-				spawnDir = 0; 
+				//spawnDir = 0; 
             }
         }
 
